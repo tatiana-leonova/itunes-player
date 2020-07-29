@@ -1,5 +1,4 @@
 export const videoPlayerInit = () => {
-    console.log('Video Player');
 
     const videoPlayer = document.querySelector('.video-player');
     const videoTimePassed = document.querySelector('.video-time__passed');
