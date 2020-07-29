@@ -79,10 +79,11 @@ export const videoPlayerInit = () => {
         });
 
         // Регулировка громкости
-        videoVolume.addEventListener('input', ()=> {
+        videoVolume.addEventListener('input', () => {
             videoPlayer.volume = videoVolume.value / 100;
         });
 
+        // Положение громкости при старте на половину
         videoPlayer.volume = 0.5;
 
         videoVolume.value = videoPlayer.volume * 100;
