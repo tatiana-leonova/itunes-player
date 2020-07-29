@@ -7,6 +7,8 @@ export const videoPlayerInit = () => {
     const videoProgress = document.querySelector('.video-progress');
     const videoTimeTotal = document.querySelector('.video-time__total');
     const videoButtonStop = document.querySelector('.video-button__stop');
+    const videoVolume = document.querySelector('.video-volume');
+    const videoFullscreen = document.querySelector('.video-fullscreen');
 
     const toggleIcon = () => {
         if (videoPlayer.paused) {
@@ -70,4 +72,18 @@ export const videoPlayerInit = () => {
 
         videoPlayer.currentTime = (value * duration) / 100; // присваиваем новое время, куда мы должны переключить
     });
+
+        // Для показа видео на полный экран
+        videoFullscreen.addEventListener('click', () => {
+            videoPlayer.requestFullscreen();
+        });
+
+        // Регулировка громкости
+        videoVolume.addEventListener('input', ()=> {
+            videoPlayer.volume = videoVolume.value / 100;
+        });
+
+        videoPlayer.volume = 0.5;
+
+        videoVolume.value = videoPlayer.volume * 100;
 };
