@@ -66,5 +66,5 @@ export const radioPlayerInit = () => {
     // Положение громкости при старте на половину
     audio.volume = 0.5;
 
-    radioVolume.value = radioItem.volume * 100;
+    radioVolume.value = audio.volume * 100;
 };
