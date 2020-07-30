@@ -1,1 +1,1 @@
-export const addZero = n => n < 10 ? '0' + n : n;
+export const addZero = n => n < 10 ? '0' + n : n;     //   Функция добавляения нуля перед минутами и секундами в плейере
